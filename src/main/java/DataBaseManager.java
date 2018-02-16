@@ -33,20 +33,22 @@ public class Main {
     }
 
     private static void create(int i, String message) {
-        Message msg = new Message(i, message);
+        Message msg = new Message(message);
         EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
+        EntityTransaction et = em.getTransaction();
+        et.begin();
         em.persist(msg);
 //        em.createNativeQuery("INSERT INTO content (id, text) VALUES (?,?)").setParameter(i, message);
-        em.getTransaction().commit();
+        et.commit();
         em.close();
     }
 
     private static void clean() {
         EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
+        EntityTransaction et = em.getTransaction();
+        et.begin();
         em.createNativeQuery("DELETE FROM content").executeUpdate();
-        em.getTransaction().commit();
+        et.commit();
         em.close();
     }
 }
