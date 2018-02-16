@@ -6,7 +6,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaBuilder;
 
-public class Main {
+public class DataBaseManager {
 
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("utrwalacz");
 

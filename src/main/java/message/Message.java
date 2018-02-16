@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Message {
     @Id
     @Column(name = "id")
-//    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(name = "test", nullable = false)
     private String text;
@@ -18,6 +18,10 @@ public class Message {
     }
 
     public Message() {
+    }
+
+    public Message(String text) {
+        this.text = text;
     }
 
     public long getId() {

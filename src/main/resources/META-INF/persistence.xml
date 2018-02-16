@@ -10,6 +10,10 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/msgs?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
             <property name="javax.persistence.jdbc.user" value="jdbc"/>
             <property name="javax.persistence.jdbc.password" value="12345"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <!--<property name="hibernate.id.new_generator_mappings" value="false"/>-->
             <!--<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />-->
         </properties>
     </persistence-unit>
